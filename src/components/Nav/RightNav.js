@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
@@ -28,13 +29,12 @@ const Ul = styled.ul`
 
 const RightNav = ({open}) => {
     return (
-        <Ul open={open}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Sign in</li>
-        <li>Sign up</li>
-    </Ul>
+        <div className='navbar'>
+            <Ul open={open}>
+                <NavLink to="/"><li>Home</li></NavLink>
+                <NavLink to="/character"><li>My fav</li></NavLink>
+            </Ul>
+        </div>
     )
 }
 export default RightNav
